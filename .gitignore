@@ -1,0 +1,28 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+.ruff_cache
+
+# Environment variables
+.env
+.env*.local
+
+# ChromaDB local storage
+.chroma_db
+
+# Node/React
+node_modules/
+.next/
+dist-ssr/
+
+# v0 runtime files
+__v0_runtime_loader.js
+__v0_devtools.tsx
+__v0_jsx-dev-runtime.ts

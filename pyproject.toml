@@ -1,0 +1,28 @@
+[project]
+name = "db-analyzer"
+version = "0.1.0"
+description = "Natural language SQL analytics with RAG"
+readme = "README.md"
+requires-python = ">=3.12"
+
+dependencies = [
+    "chromadb",
+    "fastapi",
+    "langchain-text-splitters",
+    "ollama",
+    "pandas",
+    "pymysql",
+    "python-multipart",
+    "sqlalchemy",
+    "uvicorn[standard]"
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["apps/backend"]
+
+[project.scripts]
+db-analyzer = "db_analyzer.__main__:main"
