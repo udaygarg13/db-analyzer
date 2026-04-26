@@ -133,7 +133,7 @@ export default function ConnectionPanel({ session, setSession, setSchema }) {
               key={type.value}
               onClick={() => setDbType(type.value)}
               className={cn(
-                "flex items-center gap-2 px-3 py-2 rounded-lg border text-sm font-medium transition-all",
+                "flex items-center gap-1 px-3 py-2 rounded-lg border text-sm font-medium transition-all",
                 dbType === type.value
                   ? "border-foreground bg-foreground text-background"
                   : "border-border bg-card hover:bg-accent text-foreground"
