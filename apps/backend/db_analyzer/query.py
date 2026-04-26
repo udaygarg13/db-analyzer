@@ -21,13 +21,14 @@ Rules:
 - If the question cannot be answered from the schema, output: CANNOT_ANSWER
 - Use table and column names exactly as they appear in the schema.
 - For aggregations, always use clear aliases (e.g. AS total_revenue).
-- Limit results to 100 rows unless the question asks for all data.
+- Never use REGEXP_LIKE, ILIKE, or other dialect-specific functions unless the dialect explicitly supports them.
+- For SQLite, use LIKE for pattern matching instead of regex functions.
 """
 
 ANSWER_SYSTEM = """You are a helpful data analyst explaining query results to a non-technical business user.
 
 Given a question, the SQL query that was run, and the results, provide:
-1. A clear, concise answer in plain English (2–4 sentences).
+1. A clear, concise answer in plain English (2-4 sentences).
 2. Any notable patterns, outliers, or follow-up insights worth mentioning.
 
 Do not repeat the SQL. Do not use jargon. Be specific with numbers."""
